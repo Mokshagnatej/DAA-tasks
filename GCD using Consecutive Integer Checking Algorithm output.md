@@ -1,0 +1,2 @@
+Output:
+GCD of 98 and 56 is 14
