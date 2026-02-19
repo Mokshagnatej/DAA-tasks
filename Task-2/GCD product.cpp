@@ -4,7 +4,7 @@
 #define Pm1 1000000006
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 
-// Use static to move large arrays out of the stack to the data segment
+
 static int nex[15000001];
 static char is_prime[15000001];
 

@@ -1,53 +1,69 @@
+#include <cstdio>
+
+// Function to calculate sum of digits of a number
 int sum_of_digits(int num) {
- 
+    int sum = 0;
+    while (num > 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
 
-int sum = 0;
-while (num > 0) {
-   sum += num % 10;
-   num /= 10;
-}
-return sum;
-}
+// Function to calculate sum of digits of all prime factors
 int sum_of_prime_factors_digits(int num) {
- 
+    int sum = 0;
+    int factor = 2;
 
-int sum = 0;
-int factor = 2;
-while (num > 1) {
-  
-   while (num % factor == 0) {
-       sum += sum_of_digits(factor);
-       num /= factor;
-   }
-   factor++;
-   if (factor * factor > num) {
-       break;
-   }
+    while (num > 1) {
+        while (num % factor == 0) {
+            sum += sum_of_digits(factor);
+            num /= factor;
+        }
+        factor++;
+        if (factor * factor > num) {
+            break;
+        }
+    }
+
+    // If num is still greater than 1, then it's a prime factor
+    if (num > 1) {
+        sum += sum_of_digits(num);
+    }
+
+    return sum;
 }
 
-if (num > 1) {
-   sum += sum_of_digits(num);
-}
-return sum;
-}
- 
+// Function to check if a number is a Smith number
 int solve(int n) {
-   if (n < 4) {
-   return 0;
+    if (n < 4) {
+        return 0;
+    }
+
+    int sum_num_digits = sum_of_digits(n);
+    int sum_factors_digits = sum_of_prime_factors_digits(n);
+
+    if (sum_num_digits == sum_factors_digits) {
+        return 1;  // It's a Smith number
+    } else {
+        return 0;  // It's not a Smith number
+    }
 }
- 
 
-int sum_num_digits = sum_of_digits(n);
- 
+// Main function
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
 
-int sum_factors_digits = sum_of_prime_factors_digits(n);
- 
+    if (solve(n)) {
+        printf("%d\n", n);
+        printf("It's a Smith number\n");
+    } else {
+        printf("%d\n", n);
+        printf("It's not a Smith number\n");
+    }
 
-if (sum_num_digits == sum_factors_digits) {
-   return 1; 
-} else {
-   return 0; 
-}
- 
+    return 0;
 }
  

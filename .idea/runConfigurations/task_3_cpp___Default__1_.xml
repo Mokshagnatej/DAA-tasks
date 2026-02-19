@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="task-3.cpp - Default (1)" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" singleton="false" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DAA-tasks" TARGET_NAME="task-3.cpp - Default (1)" CONFIG_NAME="task-3.cpp - Default (1)">
+    <option name="sourceFile" value="$USER_HOME$/Documents/CLionProjects/DAA-tasks/task-3.cpp" />
+    <option name="toolchainName" value="Default" />
+    <method v="2">
+      <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      <option name="LaunchBrowser.Before.Run" />
+    </method>
+  </configuration>
+</component>

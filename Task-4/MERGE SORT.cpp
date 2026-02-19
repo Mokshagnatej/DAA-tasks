@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
-#include <omp.h>
+
 
 void simplemerge(int a[], int low, int mid, int high) {
     int i, j, k, c[10000];
