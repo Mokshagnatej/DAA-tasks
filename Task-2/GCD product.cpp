@@ -33,12 +33,17 @@ void findprime(int range) {
         }
     }
     nex[last] = 0;
-    nex[0] = head; // Store start of list in nex[0]
+    nex[0] = head;
 }
 
 int main() {
     long long M, N;
-    if (scanf("%lld %lld", &M, &N) != 2) return 0;
+
+
+    if (scanf("%lld %lld", &M, &N) != 2) {
+        fprintf(stderr, "Error: Invalid input. Please provide two long integers.\n");
+        return 1;
+    }
 
     int range = (M < N) ? (int)M : (int)N;
     findprime(range);
